@@ -1,0 +1,10 @@
+generated/*
+!generated/.gitkeep
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.log
+*.bak
+*.backup
+.claude/
