@@ -1,14 +1,30 @@
-# Velora
+# 🛡️ Velora
 
 Simple self-hosted private tunnel installer for personal servers.
 
-## What It Does
+<p>
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+  <img alt="Ubuntu 22.04 | 24.04" src="https://img.shields.io/badge/OS-Ubuntu%2022.04%20%7C%2024.04-E95420?logo=ubuntu&logoColor=white">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white">
+  <img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnubash&logoColor=white">
+  <img alt="Protocol" src="https://img.shields.io/badge/Protocol-VLESS%20%2B%20Reality-6f42c1">
+  <img alt="Setup time" src="https://img.shields.io/badge/Setup%20time-%3C20s-brightgreen">
+</p>
+
+## 🎬 Demo
+
+A full install, timed, from a clean Ubuntu VPS to a working VLESS+Reality
+tunnel:
+
+<video src="docs/demo.mp4" controls muted playsinline width="100%"></video>
+
+## ✨ What It Does
 
 Velora automates the deployment of a VLESS + Reality tunnel on your personal
 Ubuntu VPS. After running 2–3 commands, you get a ready-to-use private tunnel
 with a single-line connection URL ready for import into your client.
 
-## Features
+## ⚡ Features
 
 - Zero-config sensible defaults — works out of the box
 - Fully automated Xray installation via the official XTLS script
@@ -17,21 +33,21 @@ with a single-line connection URL ready for import into your client.
 - Dry-run mode for validation without touching the system
 - Clean uninstall with backup restoration
 
-## Supported OS
+## 🐧 Supported OS
 
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
 
 Other distributions are not supported.
 
-## Requirements
+## 📋 Requirements
 
 - A fresh Ubuntu 22.04 or 24.04 VPS
 - Root access (sudo)
 - Port 443 available (or choose a custom port)
 - Internet access during installation
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 git clone https://github.com/jesuspeterson342-dot/Velora.git
@@ -47,7 +63,7 @@ That's it. The installer will:
 4. Start and enable the Xray service
 5. Save your connection URL
 
-## CLI Options
+## ⚙️ CLI Options
 
 All options are passed through `install.sh` to the Python installer:
 
@@ -82,7 +98,7 @@ python3 installer.py --dry-run
 sudo bash install.sh --print-url
 ```
 
-## Generated Files
+## 📁 Generated Files
 
 After a successful installation, Velora creates these files inside the
 project directory:
@@ -97,7 +113,7 @@ generated/
 The state file is stored at `/etc/velora/state.json` for status checks
 and clean uninstall.
 
-## How to Copy the Connection URL
+## 🔗 How to Copy the Connection URL
 
 The generated VLESS URL is saved to `generated/URL.txt`.
 
@@ -126,7 +142,19 @@ Copy the single line and import it into your client application.
 contains a single unbroken line. Copy carefully — do not add extra spaces
 or newlines.
 
-## Status Check
+## ⏱️ Timed Install (optional)
+
+Want to see how fast it actually runs on your own server?
+
+```bash
+sudo bash timed-install.sh
+```
+
+Same as `install.sh`, but with a live elapsed-time counter and a final
+`Done in Ns.` summary. Actual time depends on your network speed and server
+specs — this measures your run, it isn't a guarantee.
+
+## 📊 Status Check
 
 ```bash
 sudo bash status.sh
@@ -139,7 +167,7 @@ Shows:
 - Config path
 - Path to your connection URL
 
-## Uninstall
+## 🧹 Uninstall
 
 ```bash
 sudo bash uninstall.sh
@@ -152,7 +180,7 @@ Velora's uninstaller:
 3. Removes only files created by Velora
 4. Does **not** remove the Xray binary or systemd service
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
 ### Port 443 already in use
 
@@ -215,7 +243,7 @@ Velora only supports Ubuntu 22.04 and 24.04. Check your OS:
 cat /etc/os-release
 ```
 
-## Security Notes
+## 🔒 Security Notes
 
 - `generated/URL.txt` grants full access to your tunnel. Keep it private.
 - Do not commit generated files to version control (they are in `.gitignore`).
@@ -223,6 +251,6 @@ cat /etc/os-release
 - The state file at `/etc/velora/state.json` does **not** store the private key.
 - Generated files are created with restrictive permissions (600).
 
-## License
+## 📄 License
 
 MIT License. See [LICENSE](LICENSE).
