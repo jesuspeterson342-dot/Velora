@@ -252,6 +252,11 @@ cat /etc/os-release
 - The state file at `/etc/velora/state.json` does **not** store the private key.
 - Generated files are created with restrictive permissions (600).
 
+## 🙏 Acknowledgments
+
+Development included AI-assisted debugging and documentation work with
+Claude (Anthropic) — see the commit history for specifics.
+
 ## 📄 License
 
 MIT License. See [LICENSE](LICENSE).
