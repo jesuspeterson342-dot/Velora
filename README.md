@@ -8,13 +8,14 @@ Simple self-hosted private tunnel installer for personal servers.
   <img alt="Python" src="https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white">
   <img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnubash&logoColor=white">
   <img alt="Protocol" src="https://img.shields.io/badge/Protocol-VLESS%20%2B%20Reality-6f42c1">
-  <img alt="Setup time" src="https://img.shields.io/badge/Setup%20time-%3C20s-brightgreen">
+  <img alt="Install script" src="https://img.shields.io/badge/Install%20script-%3C20s-brightgreen">
 </p>
 
 ## 🎬 Demo
 
-A full install, timed, from a clean Ubuntu VPS to a working VLESS+Reality
-tunnel:
+`install.sh` itself, timed, from a clean Ubuntu VPS to a working
+VLESS+Reality tunnel — doesn't include `git clone`, which depends on your
+own network:
 
 https://github.com/user-attachments/assets/36a90715-e4ee-4f0e-847e-c1eb5b7bd450
 
