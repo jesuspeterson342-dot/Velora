@@ -16,7 +16,7 @@ Simple self-hosted private tunnel installer for personal servers.
 A full install, timed, from a clean Ubuntu VPS to a working VLESS+Reality
 tunnel:
 
-<video src="docs/demo.mp4" controls muted playsinline width="100%"></video>
+https://github.com/user-attachments/assets/36a90715-e4ee-4f0e-847e-c1eb5b7bd450
 
 ## ✨ What It Does
 
