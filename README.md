@@ -75,8 +75,8 @@ sudo bash install.sh [OPTIONS]
 | Option | Default | Description |
 |--------|---------|-------------|
 | `--port PORT` | `443` | Inbound listen port |
-| `--server-name HOST` | `www.microsoft.com` | SNI server name for Reality |
-| `--dest HOST:PORT` | `www.microsoft.com:443` | Reality destination target |
+| `--server-name HOST` | `www.cloudflare.com` | SNI server name for Reality |
+| `--dest HOST:PORT` | `www.cloudflare.com:443` | Reality destination target |
 | `--client-name NAME` | `Velora` | Client label in the import URL |
 | `--dry-run` | off | Validate without system changes |
 | `--print-url` | off | Print the full VLESS URL to terminal |

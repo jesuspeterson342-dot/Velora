@@ -126,15 +126,20 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=443,
         help="Inbound listen port (default: 443)",
     )
+    # Not www.microsoft.com: xtls/reality caps the buffered handshake it
+    # captures from `dest` at 8192 bytes (transport/internet/reality's vendored
+    # tls.go), and microsoft.com's OCSP-stapled certificate chain (8273 bytes)
+    # exceeds that, so the Reality handshake never completes for any client.
+    # cloudflare.com's chain is well under the cap.
     parser.add_argument(
         "--server-name",
-        default="www.microsoft.com",
-        help="SNI server name for Reality (default: www.microsoft.com)",
+        default="www.cloudflare.com",
+        help="SNI server name for Reality (default: www.cloudflare.com)",
     )
     parser.add_argument(
         "--dest",
-        default="www.microsoft.com:443",
-        help="Reality destination target (default: www.microsoft.com:443)",
+        default="www.cloudflare.com:443",
+        help="Reality destination target (default: www.cloudflare.com:443)",
     )
     parser.add_argument(
         "--client-name",
